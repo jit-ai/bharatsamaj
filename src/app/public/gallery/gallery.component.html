@@ -1,0 +1,42 @@
+<section class="bg-img text-white text-center py-5">
+  <div class="container">
+      <h1>Our Gallery</h1>
+      <p class="lead">Explore our collection of beautiful moments and memories.</p>
+  </div>
+</section>
+
+<!-- Gallery Grid Section -->
+<section class="py-5">
+  <div class="container">
+      <div class="row g-4">
+          <div class="col-sm-6 col-md-4 col-lg-3" *ngFor="let image of images; let i = index">
+              <div class="card shadow-sm">
+                  <img [src]="image" class="card-img-top" alt="Gallery Image" (click)="openModal(i)">
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
+
+<!-- Bootstrap Modal with Navigation -->
+<div class="modal fade" id="galleryModal" tabindex="-1" aria-labelledby="galleryModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+          <div class="modal-header">
+              <h5 class="modal-title" id="galleryModalLabel">Image Preview</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body text-center">
+              <button class="btn btn-light position-absolute top-50 start-0 translate-middle-y" (click)="prevImage()">
+                  &#9664; <!-- Left arrow -->
+              </button>
+              
+              <img [src]="images[currentIndex]" class="img-fluid" alt="Selected Image">
+              
+              <button class="btn btn-light position-absolute top-50 end-0 translate-middle-y" (click)="nextImage()">
+                  &#9654; <!-- Right arrow -->
+              </button>
+          </div>
+      </div>
+  </div>
+</div>

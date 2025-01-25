@@ -1,0 +1,94 @@
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-light  bghomeimg">
+    <div class="container" >
+      <a class="navbar-brand" href="#"><img src="../../../../assets/logo.jpg" height="50px;"></a>
+      <span class="menu-icon mobile" (click)="openNav()">&#9776;</span>
+      <div class="fordesktop collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link"
+      role="button"
+      routerLink="/home"
+      routerLinkActive="active"
+      [routerLinkActiveOptions]="{ exact: true }"
+    >
+      Home
+    </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link"
+      role="button"
+      routerLink="/about"
+      routerLinkActive="active"
+      [routerLinkActiveOptions]="{ exact: true }"
+    >
+      About
+    </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link"
+      role="button"
+      routerLink="/services"
+      routerLinkActive="active"
+      [routerLinkActiveOptions]="{ exact: true }"
+    >
+    Events
+    </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link"
+      role="button"
+      routerLink="/gallery"
+      routerLinkActive="active"
+      [routerLinkActiveOptions]="{ exact: true }"
+    >
+      Gallery
+    </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link"
+      role="button"
+      routerLink="/harmony"
+      routerLinkActive="active"
+      [routerLinkActiveOptions]="{ exact: true }"
+    >
+      Harmony
+    </a>
+          </li>
+
+        <li class="nav-item">
+          <a class="nav-link"
+    role="button"
+    routerLink="/joinus"
+    routerLinkActive="active"
+    [routerLinkActiveOptions]="{ exact: true }"
+  >
+    JoinUs 
+  </a>
+        </li>
+          <li class="nav-item">
+            <a class="nav-link"
+      role="button"
+      routerLink="/contact"
+      routerLinkActive="active"
+      [routerLinkActiveOptions]="{ exact: true }"
+    >
+      Contact
+    </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <div id="mySidenav" class="sidenav" [ngClass]="{ 'open': isNavOpen }">
+    <a href="javascript:void(0)" class="closebtn" (click)="closeNav()">&times;</a>
+    <a routerLink="/home" routerLinkActive="active">Home</a>
+    <a routerLink="/about" routerLinkActive="active">About</a>
+    <a routerLink="/services" routerLinkActive="active">Events</a>
+    <a routerLink="/gallery" routerLinkActive="active">Gallery</a>
+    <a routerLink="/harmony" routerLinkActive="active">Harmony</a>
+    <a routerLink="/joinus" routerLinkActive="active">JoinUs</a>
+    <a routerLink="/contact" routerLinkActive="active">Contact</a>
+  </div>
+  
+  
