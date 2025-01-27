@@ -120,3 +120,9 @@ ul.navbar-nav.ms-auto li {
     display: block;
   }
 }
+
+.navbar-nav .nav-link.active {
+  color: #fff !important; /* Ensure active links are visible */
+  border-bottom: 2px solid #fff;
+  font-weight: bold;
+}

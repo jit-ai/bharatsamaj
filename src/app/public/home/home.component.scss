@@ -3,7 +3,35 @@
     //background: linear-gradient(to bottom, #f16a14f7, #e0c29fab);
    // background:#FF8636;
 }
-// section#features {
-//     background: url(https://media.istockphoto.com/id/1297933144/vector/vector-illustration-of-indian-tricolor-flag-background.jpg?s=612x612&w=0&k=20&c=tCd-ZdLMNHw_KAMZTX9zStqEDdWzXlS6FYrvjrZIswk=);
-//     background-size: 100%;
-// }
+.title
+{
+    font-weight: 600;
+}
+.sub-title{
+    font-weight: 600;
+}
+
+@media (min-width: 992px) {
+    #features .row {
+        display: flex;
+        align-items: center;
+    }
+
+    #features .text-section {
+        text-align: left;
+    }
+
+    #features img {
+        border-radius: 10px;
+    }
+
+    #features .sub-title {
+        font-size: 1.5rem;
+        font-weight: 600;
+    }
+
+    #features p {
+        font-size: 1rem;
+        line-height: 1.8;
+    }
+}

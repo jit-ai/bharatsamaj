@@ -1,6 +1,6 @@
 import { NgClass } from '@angular/common';
 import { Component } from '@angular/core';
-import { RouterModule } from '@angular/router';
+import { Router, RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -10,6 +10,11 @@ import { RouterModule } from '@angular/router';
   styleUrls: ['./header.component.scss'], // Fixed key name
 })
 export class HeaderComponent {
+  constructor(private router: Router) {
+    this.router.events.subscribe(() => {
+      this.isNavOpen = false;  // Sidebar closes automatically on route change
+    });
+  }
   isNavOpen: boolean = false;
   myFunction() {
     const x = document.getElementById('myTopnav');
